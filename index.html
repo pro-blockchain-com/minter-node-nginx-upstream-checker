@@ -211,8 +211,8 @@
             },
             refresh() {
                 axios.all([
-                    axios.get("//" + window.location.hostname + ':8841/status'),
-                    axios.get("//" + window.location.hostname + ':8841/net_info'),
+                    axios.get("//" + window.location.hostname + ':8840/status'),
+                    axios.get("//" + window.location.hostname + ':8840/net_info'),
                 ]).then(axios.spread(function (status, net_info) {
                     this.error = null
 
