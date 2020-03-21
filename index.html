@@ -245,10 +245,10 @@
                         this.stake = 0;
                     }.bind(this));
 
-                    setTimeout(this.refresh, 2000)
+                    setTimeout(this.refresh, 1000)
                 }.bind(this))).catch(function (reason) {
                     this.error = reason.toString();
-                    setTimeout(this.refresh, 2000)
+                    setTimeout(this.refresh, 1000)
                 }.bind(this))
 
                 axios.get("https://node-main.minter.su/status").then(function (masterStatus) {
