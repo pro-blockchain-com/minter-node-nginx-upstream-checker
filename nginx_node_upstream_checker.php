@@ -6,9 +6,12 @@ error_reporting(0);
 
 $k = "minter_main";
 $n[$k][path] = "/etc/nginx/sites-enabled/00_upstream_main.conf";
+//$n[$k][nodes][] = "10.164.11.188:8841";
+//$n[$k][nodes][] = "lxgn-o4.o.dp.ua:8841";
+//$n[$k][nodes][] = "lxgn-o5.o.dp.ua:8841";
+$n[$k][nodes][] = "10.0.102.143:8841";
 $n[$k][nodes][] = "10.0.102.141:8841";
 $n[$k][nodes][] = "10.0.102.142:8841";
-$n[$k][nodes][] = "10.0.102.143:8841";
 $n[$k][nodes][] = "10.0.102.146:8841";
 
 
@@ -22,7 +25,8 @@ $n[$k][nodes][] = "10.0.102.146:8841";
 //$node_urls = node_urls();
 $conf_def = "upstream [name] {
 [lines]
-    server lxgn-o4.o.dp.ua:8841 backup;
+#    server node-main.minter.su:80 backup;
+    server http://10.0.102.60:81 backup;
 }
 ";
 
